@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="theme-color" content="#0b3c37" />
+    <meta name="description" content="Explore the islands, restore habitats, and protect wildlife in a co-op eco adventure." />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230b3c37'/%3E%3Ctext x='32' y='47' text-anchor='middle' font-size='48' fill='%23d4df8b'%3E%E2%9C%B3%3C/text%3E%3C/svg%3E" />
+    <title>ISLAND KEEPERS — Nusantara Eco Quest</title>
+    <script type="module" crossorigin src="/assets/index-BNaKwEHv.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-Dqv32YJt.css">
+  </head>
+  <body>
+    <div id="game"></div>
+    <div id="app">
+      <div class="topbar">
+        <a class="brand" href="#" aria-label="Island Keepers home"><span class="brand-mark">✳</span><span>ISLAND<span class="brand-light">KEEPERS</span><small>NUSANTARA ECO QUEST</small></span></a>
+        <div class="top-center"><span class="live-dot"></span> RAJA AMPAT · EASTERN INDONESIA <span class="top-divider"></span><span id="weather">☀ 28°</span></div>
+        <div class="top-actions"><button class="icon-btn" id="soundBtn" aria-label="Toggle sound">♫</button><button class="icon-btn" id="helpBtn" aria-label="Show controls">?</button><div class="avatar-mini">A</div></div>
+      </div>
+
+      <section class="mission-card glass">
+        <div class="eyebrow"><span class="eyebrow-line"></span> FIELD JOURNAL <span class="chapter">CHAPTER 01</span></div>
+        <h1>Where the forest<br>meets the sea<span>.</span></h1>
+        <p>Restore the mangroves, clear the shoreline, and help a little hatchling find its way home.</p>
+        <div class="mission-progress"><div class="progress-label"><span>ISLAND RECOVERY</span><b id="recovery">12%</b></div><div class="progress-track"><i id="recoveryBar"></i></div></div>
+        <div class="objectives">
+          <div class="objective" id="obj-trash"><span class="obj-icon">⌁</span><span><b>Clear the coast</b><small>Collect ocean plastic</small></span><strong id="trashCount">0/3</strong></div>
+          <div class="objective" id="obj-plant"><span class="obj-icon">♧</span><span><b>Grow the green</b><small>Plant mangrove saplings</small></span><strong id="plantCount">0/3</strong></div>
+          <div class="objective" id="obj-turtle"><span class="obj-icon">◉</span><span><b>A safe passage</b><small>Guide the hatchling home</small></span><strong id="turtleState">—</strong></div>
+        </div>
+        <div class="journal-footer"><span class="leaf-icon">❧</span> Every small action gives nature room to heal.</div>
+      </section>
+
+      <div class="right-rail">
+        <div class="island-chip glass"><span class="island-symbol">⌖</span><span><small>YOU ARE EXPLORING</small><b>Piaynemo Islands</b></span><span class="chevron">⌄</span></div>
+        <div class="eco-card glass"><div class="eco-heading"><span>ECOSYSTEM HEALTH</span><span class="health-pulse"></span></div><div class="eco-score"><strong id="healthScore">64</strong><small>/ 100</small><span class="eco-trend">↗ +2 today</span></div><div class="eco-track"><i id="healthBar"></i></div><div class="eco-tags"><span>🌿 Mangrove</span><span>🐠 Reef</span></div></div>
+      </div>
+
+      <div class="bottom-left"><div class="location-pill glass"><span class="location-dot"></span><span id="locationText">MANGROVE SHALLOWS</span><span class="coords">00° 33′ S · 130° 41′ E</span></div><div class="party-pill glass"><div class="party-avatars"><span class="party-a">A</span><span class="party-b">B</span><span class="party-plus">+</span></div><span><b id="partyLabel">1 / 2 explorers</b><small id="partyHint">Press <kbd>2</kbd> to join together</small></span></div></div>
+
+      <div class="bottom-right"><div class="compass glass"><span>N</span><div class="compass-needle">▲</div><small id="compassDir">NE</small></div><div class="map glass"><div class="map-water"></div><div class="map-island island-one"></div><div class="map-island island-two"></div><div class="map-island island-three"></div><div class="map-route"></div><span class="map-player" id="mapPlayer"></span><span class="map-pin">✦</span><small>PIAYNEMO</small></div></div>
+
+      <div class="toast" id="toast"><span>✦</span><b id="toastText">Nice work!</b></div>
+      <div class="interaction" id="interaction"><span class="interact-key">E</span><span id="interactionText">Collect plastic</span></div>
+      <div class="mobile-controls" id="mobileControls"><div class="dpad"><button data-dir="up">▲</button><div><button data-dir="left">◀</button><button data-dir="down">▼</button><button data-dir="right">▶</button></div></div><button class="mobile-action" id="mobileAction"><span>✦</span><small>ACTION</small></button></div>
+      <button class="join-button" id="joinButton"><span>＋</span> JOIN CO-OP <kbd>2</kbd></button>
+      <div class="start-screen" id="startScreen"><div class="start-backdrop"></div><div class="start-content"><div class="start-kicker"><span>AN ISLANDS OF INDONESIA ADVENTURE</span></div><div class="start-logo">ISLAND<br><em>KEEPERS</em><span class="logo-spark">✳</span></div><p>Somewhere in the blue heart of Raja Ampat,<br>a new beginning is taking root.</p><button id="startButton" class="start-button">BEGIN EXPEDITION <span>→</span></button><button id="startCoop" class="coop-link">＋ Bring a friend · local co-op</button><div class="start-note"><span>◉</span> A PLAYFUL JOURNEY FOR A LIVING PLANET</div></div><div class="start-bottom"><span>WASD / ARROWS TO EXPLORE</span><span>MADE FOR CURIOUS HEARTS <b>♥</b></span></div></div>
+      <div class="complete-screen" id="completeScreen"><div class="complete-card glass"><span class="complete-spark">✳</span><small>ISLAND RESTORATION COMPLETE</small><h2>A little more<br>life in the blue.</h2><p>You cleared the shore, planted new roots, and got one tiny turtle safely home. The island is breathing easier.</p><div class="complete-stats"><span><b id="finalTrash">3</b><small>PLASTICS REMOVED</small></span><span><b id="finalPlants">3</b><small>MANGROVES PLANTED</small></span><span><b>+18</b><small>HEALTH RESTORED</small></span></div><button id="playAgain">EXPLORE AGAIN <span>↻</span></button></div></div>
+      <div class="help-modal" id="helpModal"><div class="help-card glass"><button id="closeHelp">×</button><small>FIELD GUIDE</small><h2>Explore together.</h2><div class="help-row"><kbd>W A S D</kbd><span>Move around the island</span></div><div class="help-row"><kbd>E</kbd><span>Collect, plant, and help wildlife</span></div><div class="help-row"><kbd>2</kbd><span>Join or leave local co-op</span></div><div class="help-row"><kbd>ARROWS</kbd><span>Player 2 movement · keyboard</span></div><p>Look for the glowing little markers. Walk close and press <b>E</b> to make a difference.</p></div></div>
+    </div>
+  </body>
+</html>
